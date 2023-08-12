@@ -1,0 +1,141 @@
+/* import font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+  background-color: #f6f4eb;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  width: 5rem;
+  height: 2rem;
+  background-color: #749bc2;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 3px #749bc2;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #749bc2;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #91c8e4;
+  width: 400px;
+  height: 400px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 6px #749bc2;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.input-area {
+  position: relative;
+}
+
+.input-area i {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#input-field {
+  height: 2rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  width: 100%;
+}
+
+.todo-lists {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: scroll;
+  padding-right: 0.3rem;
+}
+
+.todo-item {
+  background-color: #f6f4eb;
+  min-height: 2.5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  position: relative;
+}
+
+.todo-item:hover {
+  cursor: pointer;
+}
+
+.check {
+  position: absolute;
+  opacity: 0;
+}
+
+.todo-item.checked .check {
+  opacity: 1;
+}
+
+.todo-item.checked span {
+  text-decoration: line-through;
+}
+
+.todo-item.checked .uncheck {
+  opacity: 0;
+}
+
+.delete-icon {
+  position: absolute;
+  right: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.delete-icon:hover {
+  color: red;
+}
+
+.footer-todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
